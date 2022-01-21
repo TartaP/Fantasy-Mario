@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30994055}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.08, y: 0, z: 0}
+  m_LocalPosition: {x: 3.01, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 441096583}
@@ -222,12 +222,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 0.1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &97553766
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -238,7 +238,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -266,7 +266,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30212fc9558d90843b82b01387c9d312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 20
+  bounceSpeed: 13
+  maxlifetime: 3
 --- !u!212 &97553768
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -449,8 +451,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 202e057f825a3b1469d46b1b63b4a376, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  jumpPower: 10
+  speed: 35
+  jumpPower: 30
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -469,7 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e3c549abe116e4ea43ea1d24aa49f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 0.25
+  attackCooldown: 0.75
   firePoint: {fileID: 30994056}
   fireballs:
   - {fileID: 97553762}
@@ -570,12 +572,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 0.1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &488571662
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -586,7 +588,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -614,7 +616,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30212fc9558d90843b82b01387c9d312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 20
+  bounceSpeed: 13
+  maxlifetime: 3
 --- !u!212 &488571664
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -735,7 +739,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 9.495395
+  orthographic size: 13.036746
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -834,12 +838,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 0.1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &542503081
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -850,7 +854,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -878,7 +882,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30212fc9558d90843b82b01387c9d312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 20
+  bounceSpeed: 13
+  maxlifetime: 3
 --- !u!212 &542503083
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -999,12 +1005,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 0.1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &620639956
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1015,7 +1021,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1043,7 +1049,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30212fc9558d90843b82b01387c9d312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 20
+  bounceSpeed: 13
+  maxlifetime: 3
 --- !u!212 &620639958
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1164,12 +1172,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 0.1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &670317608
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1180,7 +1188,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1208,7 +1216,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30212fc9558d90843b82b01387c9d312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 20
+  bounceSpeed: 13
+  maxlifetime: 3
 --- !u!212 &670317610
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1271,7 +1281,7 @@ GameObject:
   - component: {fileID: 968947266}
   - component: {fileID: 968947265}
   - component: {fileID: 968947267}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1478,12 +1488,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 0.1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1789251373
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1494,7 +1504,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1522,7 +1532,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30212fc9558d90843b82b01387c9d312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 20
+  bounceSpeed: 13
+  maxlifetime: 3
 --- !u!212 &1789251375
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1643,12 +1655,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 0.1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1792865305
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1659,7 +1671,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1687,7 +1699,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30212fc9558d90843b82b01387c9d312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 20
+  bounceSpeed: 13
+  maxlifetime: 3
 --- !u!212 &1792865307
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1808,12 +1822,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 0.1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1802632719
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1824,7 +1838,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1852,7 +1866,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30212fc9558d90843b82b01387c9d312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 20
+  bounceSpeed: 13
+  maxlifetime: 3
 --- !u!212 &1802632721
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1973,12 +1989,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 0.1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1816544456
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1989,7 +2005,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2017,7 +2033,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30212fc9558d90843b82b01387c9d312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 20
+  bounceSpeed: 13
+  maxlifetime: 3
 --- !u!212 &1816544458
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2138,12 +2156,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 0.1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1928232070
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2154,7 +2172,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2182,7 +2200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30212fc9558d90843b82b01387c9d312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 20
+  bounceSpeed: 13
+  maxlifetime: 3
 --- !u!212 &1928232072
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2266,6 +2286,10 @@ PrefabInstance:
       value: 4.74
       objectReference: {fileID: 0}
     - target: {fileID: 317819872755220873, guid: 577d47845512a6a41b7ca9b6ba934860, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 317819872755220873, guid: 577d47845512a6a41b7ca9b6ba934860, type: 3}
       propertyPath: m_GravityScale
       value: 5
       objectReference: {fileID: 0}
@@ -2287,7 +2311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 317819872755220874, guid: 577d47845512a6a41b7ca9b6ba934860, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.3
+      value: -28.33
       objectReference: {fileID: 0}
     - target: {fileID: 317819872755220874, guid: 577d47845512a6a41b7ca9b6ba934860, type: 3}
       propertyPath: m_LocalPosition.y

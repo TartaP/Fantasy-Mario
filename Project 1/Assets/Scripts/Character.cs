@@ -12,6 +12,7 @@ public class Character : MonoBehaviour
     private Animator anim;
     private BoxCollider2D boxCollider;
     private float horizontalInput;
+    private bool grounded;
 
     private void Awake()
     {
@@ -31,18 +32,18 @@ public class Character : MonoBehaviour
         else if (horizontalInput < -0.01f)
             transform.localScale = new Vector3(-1, 1, 1);
 
-        if (Input.GetKey(KeyCode.Space) && isGrounded())
+        if (Input.GetKey(KeyCode.Space) && grounded)
             Jump();
 
         anim.SetBool("run", horizontalInput != 0);
-        anim.SetBool("grounded", isGrounded());
+        anim.SetBool("grounded", grounded);
     }
 
     private void Jump()
     {
         body.velocity = new Vector2(body.velocity.x, speed);
         anim.SetTrigger("jump");
-        
+        grounded = false;
     }
 
     private bool isGrounded()
@@ -61,7 +62,23 @@ public class Character : MonoBehaviour
     
     public bool canAttack()
     {
-        return horizontalInput == 0 && isGrounded();
+        return horizontalInput == 0;
     }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+     {
+          
+         for (int i = 0; i < collision.contactCount; i++)
+         {
+             if (Vector2.Dot(Vector2.up, collision.GetContact(i).normal) > 0.5f)
+             { 
+                 Debug.Log("test");
+                grounded = true;
+             }
+
+         }
+         Debug.Log("test");
+     }
   
 }
