@@ -7,11 +7,21 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
+    [SerializeField] private int damage;
     public List<Transform> points;
     public int nextID=0;
     int idChangeValue = 1;
     public float speed =2;
 
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Player")
+        {
+            collision.GetComponent<Health>().TakeDamage(damage);
+            Debug.Log("enemy");
+        }
+    }
 
     private void Reset()
     {

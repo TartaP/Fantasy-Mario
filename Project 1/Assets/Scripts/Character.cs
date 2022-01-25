@@ -16,6 +16,7 @@ public class Character : MonoBehaviour
 
     private void Awake()
     {
+        enabled = true; 
         body = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
@@ -23,20 +24,22 @@ public class Character : MonoBehaviour
     
     private void Update()
     {
-       horizontalInput = Input.GetAxis("Horizontal");
-       body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
+    
+        horizontalInput = Input.GetAxis("Horizontal");
+        body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
 
 
-       if (horizontalInput > 0.01f)
-            transform.localScale = Vector3.one;
-        else if (horizontalInput < -0.01f)
-            transform.localScale = new Vector3(-1, 1, 1);
+        if (horizontalInput > 0.01f)
+                transform.localScale =  new Vector3( 3, 3, 3);
+            else if (horizontalInput < -0.01f)
+                transform.localScale = new Vector3(-3, 3, 3);
 
-        if (Input.GetKey(KeyCode.Space) && grounded)
-            Jump();
+            if (Input.GetKey(KeyCode.Space) && grounded)
+                Jump();
 
-        anim.SetBool("run", horizontalInput != 0);
-        anim.SetBool("grounded", grounded);
+            anim.SetBool("run", horizontalInput != 0);
+            anim.SetBool("grounded", grounded);
+       
     }
 
     private void Jump()
@@ -73,12 +76,12 @@ public class Character : MonoBehaviour
          {
              if (Vector2.Dot(Vector2.up, collision.GetContact(i).normal) > 0.5f)
              { 
-                 Debug.Log("test");
+            
                 grounded = true;
              }
 
          }
-         Debug.Log("test");
+         
      }
   
 }
