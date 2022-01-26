@@ -22,6 +22,8 @@ public class Enemy : MonoBehaviour
             Debug.Log("enemy");
         }
 
+        
+
     }
 
     private void Reset()

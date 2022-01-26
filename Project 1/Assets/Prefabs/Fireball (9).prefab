@@ -101,6 +101,9 @@ MonoBehaviour:
   speed: 20
   bounceSpeed: 13
   maxlifetime: 3
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!61 &644102609129764527
 BoxCollider2D:
   m_ObjectHideFlags: 0

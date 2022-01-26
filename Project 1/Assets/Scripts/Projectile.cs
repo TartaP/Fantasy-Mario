@@ -15,6 +15,7 @@ public class Projectile : MonoBehaviour
      public LayerMask enemyLayer;
 
 
+
      private void Awake()
      {
          anim = GetComponent<Animator>();
@@ -32,6 +33,11 @@ public class Projectile : MonoBehaviour
 
          lifetime += Time.deltaTime;
          if(lifetime > maxlifetime) gameObject.SetActive(false);
+         
+
+
+
+         
      }
      private void OnCollisionEnter2D(Collision2D collision)
      {
@@ -56,22 +62,31 @@ public class Projectile : MonoBehaviour
                 if (direction < 0)
                     direction = -direction;
              }
-              Debug.Log("test");
 
 
          }
 
-
-
          //boxCollider.enabled = false;
          //anim.SetTrigger("Explode");
      }
-
      public void fireBall()
      {
          RaycastHit2D rayLeft = Physics2D.Raycast(transform.position, -transform.right, .3f, enemyLayer);
-         RaycastHit2D rayRight = Physics2D.Raycast(transform.position, -transform.right, .3f, enemyLayer);
+         RaycastHit2D rayRight = Physics2D.Raycast(transform.position, transform.right, .3f, enemyLayer);
+         if (rayLeft.collider != null) 
+         {
+             Destroy(rayLeft.collider.gameObject);
+            Debug.Log("leftcontact");
+         }
+         else if (rayRight.collider != null) 
+         {
+            Destroy(rayRight.collider.gameObject);           
+            Debug.Log("rightcontact");
+         }
+         
      }
+
+        
 
      public void SetDerection(float _direction)
      {
