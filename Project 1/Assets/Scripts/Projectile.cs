@@ -35,7 +35,7 @@ public class Projectile : MonoBehaviour
          if(lifetime > maxlifetime) gameObject.SetActive(false);
          
 
-
+        fireBall();
 
          
      }
