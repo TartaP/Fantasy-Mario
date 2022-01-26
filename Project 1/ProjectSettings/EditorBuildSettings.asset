@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GameScene.unity
     guid: 0ecb6fa05282cbc489e699de51f8a97f
+  - enabled: 1
+    path: Assets/LivesScreen.unity
+    guid: 833b18f817d0a2c47ba87c7516a2e4ac
   m_configObjects: {}

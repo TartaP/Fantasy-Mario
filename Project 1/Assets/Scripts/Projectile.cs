@@ -12,6 +12,7 @@ public class Projectile : MonoBehaviour
      private Animator anim;
      private BoxCollider2D boxCollider;
      private Rigidbody2D rb;
+     public LayerMask enemyLayer;
 
 
      private void Awake()
@@ -37,6 +38,8 @@ public class Projectile : MonoBehaviour
           
          for (int i = 0; i < collision.contactCount; i++)
          {
+
+
              if (Vector2.Dot(Vector2.up, collision.GetContact(i).normal) > 0.5f)
              {
                  rb.velocity = new Vector2(rb.velocity.x, bounceSpeed);
@@ -55,12 +58,21 @@ public class Projectile : MonoBehaviour
              }
               Debug.Log("test");
 
+
          }
+
 
 
          //boxCollider.enabled = false;
          //anim.SetTrigger("Explode");
      }
+
+     public void fireBall()
+     {
+         RaycastHit2D rayLeft = Physics2D.Raycast(transform.position, -transform.right, .3f, enemyLayer);
+         RaycastHit2D rayRight = Physics2D.Raycast(transform.position, -transform.right, .3f, enemyLayer);
+     }
+
      public void SetDerection(float _direction)
      {
          lifetime = 0;

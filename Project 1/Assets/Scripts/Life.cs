@@ -1,28 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Life : MonoBehaviour
 {
-    [SerializeField] private float startingLives;
-    private float life;
+     private int startingLives;
+     public static int currentLife = 3;
 
-    private void Awake ()
+    private void Awake()
     {
-        life = startingLives;
+        // currentLife = startingLives;
     }
 
-    public void TakeDamage(float _damage)
+    public void LoseLife()
     {
-        life = Mathf.Clamp(life - _damage, 0, startingLives);
+        currentLife = currentLife - 1;
 
-        if (life > 0)
+        if (currentLife > 0)
         {
-
+            // still have lives, Restart and keep playing
+            SceneManager.LoadScene("LivesScreen");
+            Debug.Log("currentLife " + currentLife);
         }
         else
         {
-            
+            // Gameover
+            GetComponent<Character>().enabled = false;
         }
     
     }

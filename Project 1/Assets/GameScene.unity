@@ -697,7 +697,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96e46d986ac65d4ebdf20cbecbf3eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingLives: 3
 --- !u!114 &441096588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3277,9 +3276,9 @@ GameObject:
   - component: {fileID: 1247644829}
   - component: {fileID: 1247644832}
   - component: {fileID: 1247644831}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy_Gob
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3560,7 +3559,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: x1
+  m_Text: x3
 --- !u!222 &1655231392
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4252,6 +4251,10 @@ PrefabInstance:
     - target: {fileID: 644102609129764524, guid: f47a51801400cd04c8ca0a4521399880, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644102609129764528, guid: f47a51801400cd04c8ca0a4521399880, type: 3}
+      propertyPath: enemyLayer.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f47a51801400cd04c8ca0a4521399880, type: 3}
