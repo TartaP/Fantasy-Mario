@@ -21,6 +21,9 @@ public class Enemy : MonoBehaviour
             collision.GetComponent<Health>().TakeDamage(damage);
             Debug.Log("enemy");
         }
+
+        
+
     }
 
     private void Reset()

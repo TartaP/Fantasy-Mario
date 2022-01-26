@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
 
     private void Awake ()
     {
+        
         currentHealth = startingHealth;
     }
 
@@ -24,8 +25,8 @@ public class Health : MonoBehaviour
         else
         {
             //when currenthealth goes to 0, life will go down
-            GetComponent<Character>().enabled = false;
-            Debug.Log(GetComponent<Character>().enabled);
+            GetComponent<Life>().LoseLife();
+
 
         }
     

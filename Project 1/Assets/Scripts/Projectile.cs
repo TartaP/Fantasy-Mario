@@ -12,6 +12,8 @@ public class Projectile : MonoBehaviour
      private Animator anim;
      private BoxCollider2D boxCollider;
      private Rigidbody2D rb;
+     public LayerMask enemyLayer;
+
 
 
      private void Awake()
@@ -31,12 +33,19 @@ public class Projectile : MonoBehaviour
 
          lifetime += Time.deltaTime;
          if(lifetime > maxlifetime) gameObject.SetActive(false);
+         
+
+        fireBall();
+
+         
      }
      private void OnCollisionEnter2D(Collision2D collision)
      {
           
          for (int i = 0; i < collision.contactCount; i++)
          {
+
+
              if (Vector2.Dot(Vector2.up, collision.GetContact(i).normal) > 0.5f)
              {
                  rb.velocity = new Vector2(rb.velocity.x, bounceSpeed);
@@ -53,14 +62,32 @@ public class Projectile : MonoBehaviour
                 if (direction < 0)
                     direction = -direction;
              }
-              Debug.Log("test");
+
 
          }
-
 
          //boxCollider.enabled = false;
          //anim.SetTrigger("Explode");
      }
+     public void fireBall()
+     {
+         RaycastHit2D rayLeft = Physics2D.Raycast(transform.position, -transform.right, .3f, enemyLayer);
+         RaycastHit2D rayRight = Physics2D.Raycast(transform.position, transform.right, .3f, enemyLayer);
+         if (rayLeft.collider != null) 
+         {
+             Destroy(rayLeft.collider.gameObject);
+            Debug.Log("leftcontact");
+         }
+         else if (rayRight.collider != null) 
+         {
+            Destroy(rayRight.collider.gameObject);           
+            Debug.Log("rightcontact");
+         }
+         
+     }
+
+        
+
      public void SetDerection(float _direction)
      {
          lifetime = 0;
