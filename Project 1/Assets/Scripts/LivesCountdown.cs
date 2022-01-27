@@ -25,7 +25,7 @@ public class LivesCountdown : MonoBehaviour
 
         if (timer > 4)
         {
-            SceneManager.LoadScene("GameScene"); 
+            SceneManager.LoadScene("FirstLevel"); 
         }
 
     }
