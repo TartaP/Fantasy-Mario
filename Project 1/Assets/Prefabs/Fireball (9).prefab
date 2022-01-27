@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   bounceSpeed: 5
-  maxlifetime: 3
+  maxlifetime: 2
   enemyLayer:
     serializedVersion: 2
     m_Bits: 256

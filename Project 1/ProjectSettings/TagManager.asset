@@ -7,6 +7,11 @@ TagManager:
   - Ground
   - projectile
   - enemy
+  - Item
+  - Coin
+  - GrowthPot
+  - 1UP
+  - AttackPower
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,7 @@ public class Character : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float jumpPower;
+    [SerializeField] private float runPower;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
     private Rigidbody2D body;
@@ -14,8 +15,13 @@ public class Character : MonoBehaviour
     private float horizontalInput;
     private bool grounded;
 
+    private bool canFire;
+
+    public List<string> inventory;
+
     private void Awake()
     {
+        inventory = new List<string>();
         enabled = true; 
         body = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
@@ -26,7 +32,16 @@ public class Character : MonoBehaviour
     {
     
         horizontalInput = Input.GetAxis("Horizontal");
-        body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
+        if (Input.GetKey(KeyCode.Z))
+        {
+            body.velocity = new Vector2(horizontalInput * runPower, body.velocity.y);
+        }
+        else 
+        {
+            body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
+        }
+
+    
 
 
         if (horizontalInput > 0.01f)
@@ -34,7 +49,7 @@ public class Character : MonoBehaviour
             else if (horizontalInput < -0.01f)
                 transform.localScale = new Vector3(-1, 1, 0);
 
-            if (Input.GetKey(KeyCode.Space) && grounded)
+            if (Input.GetKey(KeyCode.X) && grounded)
                 Jump();
 
             anim.SetBool("run", horizontalInput != 0);
@@ -44,7 +59,7 @@ public class Character : MonoBehaviour
 
     private void Jump()
     {
-        body.velocity = new Vector2(body.velocity.x, speed);
+        body.velocity = new Vector2(body.velocity.x, jumpPower);
         anim.SetTrigger("jump");
         grounded = false;
     }
@@ -65,7 +80,8 @@ public class Character : MonoBehaviour
     
     public bool canAttack()
     {
-        return horizontalInput == 0;
+        return canFire;
+
     }
 
 
@@ -83,5 +99,42 @@ public class Character : MonoBehaviour
          }
          
      }
+
+     private void OnTriggerEnter2D(Collider2D collision)
+     {
+         
+         if (collision.CompareTag("Item"))
+         {
+             collision.gameObject.GetComponent<Collectible>().pickUP(this);
+             string itemType = collision.gameObject.GetComponent<Collectible>().itemType;
+             print("we hyave collected a:" + itemType);
+
+             inventory.Add(itemType);
+             print("Inventory length:" + inventory.Count);
+
+             Destroy(collision.gameObject);
+         }
+
+     }
+
+     public void gainLife()
+     {
+         GetComponent<Life>().GainLife();
+     }
+
+     public void growUP()
+     {
+
+     }
+     public void diamondUP()
+     {
+         
+     }
+     public void attackUP()
+     {
+         canFire = true;
+
+     }
+
   
 }

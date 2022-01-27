@@ -30,4 +30,10 @@ public class Life : MonoBehaviour
         }
     
     }
+
+    public void GainLife()
+    {
+        currentLife++;
+        
+    }
 }
