@@ -1,126 +1,191 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.26f1 (7298b473bc1a) revision 7510196'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19043) 64bit Core' Language: 'en' Physical Memory: 16256 MB
+OS: 'Windows 10  (10.0.19042) 64bit Core' Language: 'en' Physical Memory: 32649 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2020.3.26f1\Editor\Unity.exe
+C:\Program Files\UNITY EDITOR\2020.3.26f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-E:/stuff/UCF/Courses/Current/Production/Fantasy-Mario/Project 1
+H:/Users/tiger/Desktop/Fantasy-Mario/Project 1
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52104
-Successfully changed project path to: E:/stuff/UCF/Courses/Current/Production/Fantasy-Mario/Project 1
-E:/stuff/UCF/Courses/Current/Production/Fantasy-Mario/Project 1
+56670
+Successfully changed project path to: H:/Users/tiger/Desktop/Fantasy-Mario/Project 1
+H:/Users/tiger/Desktop/Fantasy-Mario/Project 1
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 53.19 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 32.70 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.26f1 (7298b473bc1a)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path E:/stuff/UCF/Courses/Current/Production/Fantasy-Mario/Project 1/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/UNITY EDITOR/2020.3.26f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path H:/Users/tiger/Desktop/Fantasy-Mario/Project 1/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1060 (ID=0x1c60)
+    Renderer: NVIDIA GeForce RTX 3080 (ID=0x2206)
     Vendor:   
-    VRAM:     6052 MB
-    Driver:   30.0.15.1123
+    VRAM:     10078 MB
+    Driver:   30.0.14.7168
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56812
+Mono path[0] = 'C:/Program Files/UNITY EDITOR/2020.3.26f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/UNITY EDITOR/2020.3.26f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/UNITY EDITOR/2020.3.26f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56604
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003024 seconds.
+Register platform support module: C:/Program Files/UNITY EDITOR/2020.3.26f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001690 seconds.
 Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 51.92 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 30.91 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.718 seconds
+- Completed reload, in  0.387 seconds
 Domain Reload Profiling:
-	ReloadAssembly (718ms)
-		BeginReloadAssembly (66ms)
+	ReloadAssembly (387ms)
+		BeginReloadAssembly (42ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (565ms)
-			LoadAssemblies (64ms)
+		EndReloadAssembly (294ms)
+			LoadAssemblies (40ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (183ms)
+			SetupTypeCache (89ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (211ms)
+			RebuildScriptCaches (19ms)
+			SetupLoadedEditorAssemblies (118ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
+				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (52ms)
-				BeforeProcessingInitializeOnLoad (19ms)
-				ProcessInitializeOnLoadAttributes (99ms)
-				ProcessInitializeOnLoadMethodAttributes (34ms)
+				RefreshPlugins (31ms)
+				BeforeProcessingInitializeOnLoad (10ms)
+				ProcessInitializeOnLoadAttributes (56ms)
+				ProcessInitializeOnLoadMethodAttributes (18ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004052 seconds.
+Registered in 0.003949 seconds.
 Begin MonoManager ReloadAssembly
+Symbol file data-000001FCF45A1390 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF9C60690 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF887C020 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF4559E50 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF85F7020 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF452DB40 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\PsdPlugin.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF452DB40 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF455ED00 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF452DB40 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF452DB40 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCFA1EE010 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF452DB40 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF4649EC0 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF452DB40 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF455ED00 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF84A4AC0 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF4461060 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF455ED00 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF43BA1E0 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF4325430 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF43CBDF0 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF8641010 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF4344020 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF8D62C40 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF43D9E00 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF4344020 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF49B76F0 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF88F9020 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF9385640 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF858AA40 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF49B8840 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCFA215220 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF8C80830 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FCF84B94D0 doesn't match image H:\Users\tiger\Desktop\Fantasy-Mario\Project 1\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 52.43 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 32.38 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.286 seconds
+- Completed reload, in  0.739 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1287ms)
-		BeginReloadAssembly (167ms)
+	ReloadAssembly (740ms)
+		BeginReloadAssembly (102ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (21ms)
-		EndReloadAssembly (1049ms)
-			LoadAssemblies (110ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (594ms)
+			LoadAssemblies (71ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (350ms)
+			SetupTypeCache (183ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (54ms)
-			SetupLoadedEditorAssemblies (395ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (242ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
+				InitializePlatformSupportModulesInManaged (2ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (53ms)
-				BeforeProcessingInitializeOnLoad (91ms)
-				ProcessInitializeOnLoadAttributes (219ms)
-				ProcessInitializeOnLoadMethodAttributes (18ms)
-				AfterProcessingInitializeOnLoad (8ms)
+				RefreshPlugins (32ms)
+				BeforeProcessingInitializeOnLoad (57ms)
+				ProcessInitializeOnLoadAttributes (132ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
-Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2226 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 98.5 MB.
 System memory in use after: 98.6 MB.
 
 Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2661.
-Total: 3.429500 ms (FindLiveObjects: 0.189800 ms CreateObjectMapping: 0.078800 ms MarkObjects: 3.007300 ms  DeleteObjects: 0.152600 ms)
+Total: 2.701000 ms (FindLiveObjects: 0.162500 ms CreateObjectMapping: 0.066800 ms MarkObjects: 2.411000 ms  DeleteObjects: 0.060200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -129,23 +194,14 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Sprites/Level Sprites/Broken stone.png
-  artifactKey: Guid(ee57fbfa36e587945a737e25226a4c1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Level Sprites/Broken stone.png using Guid(ee57fbfa36e587945a737e25226a4c1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4842b7c9770ea1e39b0188bc06b69757') in 0.124446 seconds 
-  Import took 0.128196 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.117079 seconds.
-  path: Assets/Sprites/Level Sprites/Broken stone.png
-  artifactKey: Guid(ee57fbfa36e587945a737e25226a4c1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Level Sprites/Broken stone.png using Guid(ee57fbfa36e587945a737e25226a4c1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97efd89d1a52927b0df1db77cc183d60') in 0.015022 seconds 
-  Import took 0.019350 seconds .
+  path: Assets/FirstLevel.unity
+  artifactKey: Guid(cd9d787ef8297b64d90f0ceb19cb27f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FirstLevel.unity using Guid(cd9d787ef8297b64d90f0ceb19cb27f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '862f14d9904fd5631ba3468b990f6c1a') in 0.011320 seconds 
+  Import took 0.014277 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
