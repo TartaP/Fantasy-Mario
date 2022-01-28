@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Life : MonoBehaviour
 {
      private int startingLives;
+
+     private Animator anim;
      public static int currentLife = 3;
 
     private void Awake()
@@ -20,13 +22,16 @@ public class Life : MonoBehaviour
         if (currentLife > 0)
         {
             // still have lives, Restart and keep playing
+
             SceneManager.LoadScene("LivesScreen");
             Debug.Log("currentLife " + currentLife);
+            //anim.SetBool("death", true);
         }
         else
         {
             // Gameover
             GetComponent<Character>().enabled = false;
+            
         }
     
     }

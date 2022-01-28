@@ -25,6 +25,7 @@ public class Character : MonoBehaviour
     {
         anim.SetBool("big", false);
         canFire = false;
+        anim.SetBool("firebig", false);
     }
 
 
@@ -168,7 +169,7 @@ public class Character : MonoBehaviour
      public void attackUP()
      {
          canFire = true;
-
+         anim.SetBool("firebig", true);
          
 
      }
