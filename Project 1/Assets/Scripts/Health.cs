@@ -12,15 +12,22 @@ public class Health : MonoBehaviour
         
         currentHealth = startingHealth;
     }
-
+    public void gainHealth()
+    {
+        currentHealth++; 
+    }
     public void TakeDamage(int _damage)
     {
         currentHealth = currentHealth - _damage;
+
+
 
         if (currentHealth > 0)
         {
             //if hit once, character will get smaller
             Debug.Log(currentHealth);
+            GetComponent<Character>().TakeDamage();
+
         }
         else
         {
@@ -29,6 +36,6 @@ public class Health : MonoBehaviour
 
 
         }
-    
+
     }
 }

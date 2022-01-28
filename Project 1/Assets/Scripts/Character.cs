@@ -7,15 +7,29 @@ public class Character : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float jumpPower;
     [SerializeField] private float runPower;
+    [SerializeField] private float bouncePower;
+
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
     private Rigidbody2D body;
     private Animator anim;
+
+    private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider;
     private float horizontalInput;
     private bool grounded;
 
     private bool canFire;
+
+    public void TakeDamage()
+    {
+        anim.SetBool("big", false);
+        canFire = false;
+    }
+
+
+
+
 
     public List<string> inventory;
 
@@ -26,6 +40,7 @@ public class Character : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     
     private void Update()
@@ -41,25 +56,28 @@ public class Character : MonoBehaviour
             body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
         }
 
-    
+        
 
 
-        if (horizontalInput > 0.01f)
-                transform.localScale =  new Vector3( 1, 1, 0);
-            else if (horizontalInput < -0.01f)
-                transform.localScale = new Vector3(-1, 1, 0);
+        if (horizontalInput > 0)
+                spriteRenderer.flipX = false;
+            else if (horizontalInput < 0)
+                spriteRenderer.flipX = true;
 
             if (Input.GetKey(KeyCode.X) && grounded)
-                Jump();
+                Jump(jumpPower);
 
             anim.SetBool("run", horizontalInput != 0);
             anim.SetBool("grounded", grounded);
+
+        
+
        
     }
 
-    private void Jump()
+    private void Jump(float power)
     {
-        body.velocity = new Vector2(body.velocity.x, jumpPower);
+        body.velocity = new Vector2(body.velocity.x, power);
         anim.SetTrigger("jump");
         grounded = false;
     }
@@ -92,7 +110,11 @@ public class Character : MonoBehaviour
          {
              if (Vector2.Dot(Vector2.up, collision.GetContact(i).normal) > 0.5f)
              { 
-            
+                 if (collision.collider.tag == "enemy")
+                 {
+                     Jump(bouncePower);
+                     Destroy(collision.gameObject);
+                 }
                 grounded = true;
              }
 
@@ -117,6 +139,18 @@ public class Character : MonoBehaviour
 
      }
 
+
+    
+
+     public float isdirection()
+     {
+         if (spriteRenderer.flipX)
+         {
+             return -1;
+         }
+         return 1;
+     }
+
      public void gainLife()
      {
          GetComponent<Life>().GainLife();
@@ -124,7 +158,8 @@ public class Character : MonoBehaviour
 
      public void growUP()
      {
-
+         anim.SetBool("big", true);
+         GetComponent<Health>().gainHealth();
      }
      public void diamondUP()
      {
@@ -133,6 +168,8 @@ public class Character : MonoBehaviour
      public void attackUP()
      {
          canFire = true;
+
+         
 
      }
 

@@ -14,13 +14,22 @@ public class Enemy : MonoBehaviour
     public float speed =2;
 
     
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.tag == "Player")
-        {
-            collision.GetComponent<Health>().TakeDamage(damage);
-            Debug.Log("enemy");
-        }
+        for (int i = 0; i < collision.contactCount; i++)
+         {
+             if (Vector2.Dot(Vector2.down, collision.GetContact(i).normal) > 0.5f)
+             { 
+                 //if(collision.collider.tag == "Player")
+                 return;
+             }
+
+         }
+
+        collision.gameObject.GetComponent<Health>().TakeDamage(damage);
+
+
+        
 
         
 
@@ -34,7 +43,7 @@ public class Enemy : MonoBehaviour
 
     void Init()
     {
-        GetComponent<BoxCollider2D>().isTrigger = true;
+        GetComponent<BoxCollider2D>().isTrigger = false;
 
         GameObject root = new GameObject(name+ "_Root");
 
