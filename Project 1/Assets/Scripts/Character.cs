@@ -21,6 +21,12 @@ public class Character : MonoBehaviour
 
     private bool canFire;
 
+    private bool ctrlActive;
+    private bool isDead;
+    private Collider2D playercol;
+    public float shockForce;
+
+
     public void TakeDamage()
     {
         anim.SetBool("big", false);
@@ -42,11 +48,18 @@ public class Character : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        playercol = GetComponent<Collider2D>();
+
+        ctrlActive = true;
+
     }
     
     private void Update()
     {
-    
+      if (ctrlActive == false)
+      return;
+
         horizontalInput = Input.GetAxis("Horizontal");
         if (Input.GetKey(KeyCode.Z))
         {
@@ -72,7 +85,9 @@ public class Character : MonoBehaviour
             anim.SetBool("grounded", grounded);
 
         
+        
 
+        
        
     }
 
@@ -174,5 +189,39 @@ public class Character : MonoBehaviour
 
      }
 
+     public void PlayerDeath()
+     {
+         isDead = true;
+         anim.SetBool("Dead", isDead);
+
+
+         ctrlActive = false;
+
+         playercol.enabled = false;
+
+         body.gravityScale = 2.5f;
+         body.AddForce(transform.up * shockForce, ForceMode2D.Impulse);
+
+         StartCoroutine("PlayerRespawn");
+        
+     }
+
+     public IEnumerator PlayerRespawn()
+     {
+         yield return new WaitForSeconds(1.5f);
+         isDead = false;
+         anim.SetBool("Dead", isDead);
+
+         playercol.enabled = true;
+         
+
+         body.gravityScale = 1.8f;
+
+         yield return new WaitForSeconds(0.1f);
+         ctrlActive = true;
+
+         GetComponent<Life>().LoseLife();
+
+     }
   
 }

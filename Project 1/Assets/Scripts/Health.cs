@@ -32,7 +32,9 @@ public class Health : MonoBehaviour
         else
         {
             //when currenthealth goes to 0, life will go down
-            GetComponent<Life>().LoseLife();
+
+            GetComponent<Character>().PlayerDeath(); 
+            
 
 
         }
