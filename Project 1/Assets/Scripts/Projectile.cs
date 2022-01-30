@@ -78,12 +78,15 @@ public class Projectile : MonoBehaviour
              Destroy(rayLeft.collider.gameObject);
             Debug.Log("leftcontact");
              this.gameObject.SetActive(false); 
+
+             ScoreManager.instance.goblinscore();
          }
          else if (rayRight.collider != null) 
          {
             Destroy(rayRight.collider.gameObject);           
             Debug.Log("rightcontact");
             this.gameObject.SetActive(false);
+            ScoreManager.instance.goblinscore();
          }
          
      }

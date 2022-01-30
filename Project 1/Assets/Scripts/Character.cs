@@ -130,6 +130,8 @@ public class Character : MonoBehaviour
                  {
                      Jump(bouncePower);
                      Destroy(collision.gameObject);
+                     ScoreManager.instance.goblinscore();
+                     return;
                  }
                 grounded = true;
              }
@@ -151,6 +153,8 @@ public class Character : MonoBehaviour
              print("Inventory length:" + inventory.Count);
 
              Destroy(collision.gameObject);
+
+             
          }
 
      }
@@ -176,9 +180,13 @@ public class Character : MonoBehaviour
      {
          anim.SetBool("big", true);
          GetComponent<Health>().gainHealth();
+
+         ScoreManager.instance.growth();
      }
      public void diamondUP()
      {
+         ScoreManager.instance.AddPoint();
+         ScoreManager.instance.diamonds();
          
      }
      public void attackUP()
@@ -186,7 +194,7 @@ public class Character : MonoBehaviour
          canFire = true;
          anim.SetBool("firebig", true);
          
-
+         ScoreManager.instance.attackup();
      }
 
      public void PlayerDeath()
