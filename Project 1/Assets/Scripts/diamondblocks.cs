@@ -9,11 +9,20 @@ public class diamondblocks : MonoBehaviour
     private Animator anim;
     private bool opened = false;
 
+    public Rigidbody2D diamondappear; 
+
+
+
+
     void Awake()
     {
         anim = GetComponent<Animator>();
     }
 
+    void Update()
+    {
+
+    }
     void OnCollisionEnter2D(Collision2D col)
     {
 
@@ -30,8 +39,12 @@ public class diamondblocks : MonoBehaviour
                     ScoreManager.instance.AddPoint();
                     ScoreManager.instance.diamonds();
                     anim.SetTrigger("chestopen");
+                    //anim.SetTrigger("diamondappearss");
+                    
+                    //Instantiate(diamondappear, transform.position + (new Vector3(0, (float)1.3, 0)), Quaternion.identity);                    
                     opened = true;
                     return;
+                    
                 }
 
             }

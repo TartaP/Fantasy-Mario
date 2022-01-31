@@ -137,26 +137,20 @@ public class Character : MonoBehaviour
              }
 
          }
-         
-     }
-
-     private void OnTriggerEnter2D(Collider2D collision)
-     {
-         
-         if (collision.CompareTag("Item"))
+         if (collision.collider.CompareTag("Item"))
          {
-             collision.gameObject.GetComponent<Collectible>().pickUP(this);
-             string itemType = collision.gameObject.GetComponent<Collectible>().itemType;
+             collision.collider.gameObject.GetComponent<Collectible>().pickUP(this);
+             string itemType = collision.collider.gameObject.GetComponent<Collectible>().itemType;
              print("we hyave collected a:" + itemType);
 
              inventory.Add(itemType);
              print("Inventory length:" + inventory.Count);
 
-             Destroy(collision.gameObject);
+             Destroy(collision.collider.gameObject);
 
              
          }
-
+         
      }
 
 
