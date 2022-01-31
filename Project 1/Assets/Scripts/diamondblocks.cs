@@ -7,6 +7,7 @@ public class diamondblocks : MonoBehaviour
     public int totalCoins;
 
     private Animator anim;
+    private bool opened = false;
 
     void Awake()
     {
@@ -15,6 +16,11 @@ public class diamondblocks : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
+
+        if (opened == true)
+        {
+            return;
+        }
         for (int i = 0; i < col.contactCount; i++)
         {
             if (Vector2.Dot(Vector2.up, col.GetContact(i).normal) > 0.5f)
@@ -24,6 +30,8 @@ public class diamondblocks : MonoBehaviour
                     ScoreManager.instance.AddPoint();
                     ScoreManager.instance.diamonds();
                     anim.SetTrigger("chestopen");
+                    opened = true;
+                    return;
                 }
 
             }
