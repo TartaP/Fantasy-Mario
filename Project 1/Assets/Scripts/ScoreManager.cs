@@ -20,7 +20,7 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreText.text = string.Format("{0:D5}", score);
+        scoreText.text = string.Format("{0:D6}", score);
         diamondscoreText.text = string.Format("x{0:D2}", diamondscore);
 
     }
@@ -36,25 +36,25 @@ public class ScoreManager : MonoBehaviour
     {
 
         score = score + 100;
-        scoreText.text = string.Format("{0:D5}", score);
+        scoreText.text = string.Format("{0:D6}", score);
     }
 
     public void growth()
     {
         score = score + 1000;
-        scoreText.text = string.Format("{0:D5}", score);
+        scoreText.text = string.Format("{0:D6}", score);
     }
 
     public void attackup()
     {
         score = score + 1000;
-        scoreText.text = string.Format("{0:D5}", score);
+        scoreText.text = string.Format("{0:D6}", score);
     }
 
     public void goblinscore()
     {
         score = score + 100;
-        scoreText.text = string.Format("{0:D5}", score);
+        scoreText.text = string.Format("{0:D6}", score);
     }
 
 }
