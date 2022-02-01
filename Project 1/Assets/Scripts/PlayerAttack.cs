@@ -11,6 +11,7 @@ public class PlayerAttack : MonoBehaviour
     private Character playerMovement;
     private float cooldownTimer = Mathf.Infinity;
     private float offSet;
+    [SerializeField] private AudioSource fireSound;
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -24,6 +25,7 @@ public class PlayerAttack : MonoBehaviour
 
         if  (playerMovement.canAttack() && Input.GetKeyDown(KeyCode.Z) && cooldownTimer > attackCooldown)
             Attack();
+            
 
         cooldownTimer += Time.deltaTime;
 
@@ -36,7 +38,7 @@ public class PlayerAttack : MonoBehaviour
     {
         anim.SetTrigger("attack");
         cooldownTimer = 0;
-
+        fireSound.Play();
         fireballs[FindFireball()].transform.position = firePoint.position;
         fireballs[FindFireball()].GetComponent<Projectile>().SetDerection(playerMovement.isdirection());
         Debug.Log(firePoint.localPosition);

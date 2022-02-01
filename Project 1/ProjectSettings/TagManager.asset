@@ -13,6 +13,7 @@ TagManager:
   - 1UP
   - AttackPower
   - flagpole
+  - Brick
   layers:
   - Default
   - TransparentFX

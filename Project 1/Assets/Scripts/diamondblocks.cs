@@ -10,7 +10,7 @@ public class diamondblocks : MonoBehaviour
     private bool opened = false;
 
     public Rigidbody2D diamondappear; 
-
+    [SerializeField] AudioSource coinSound;
 
 
 
@@ -36,6 +36,7 @@ public class diamondblocks : MonoBehaviour
             {
                 if (col.collider.tag == "Player")
                 {
+                    coinSound.Play();
                     ScoreManager.instance.AddPoint();
                     ScoreManager.instance.diamonds();
                     anim.SetTrigger("chestopen");

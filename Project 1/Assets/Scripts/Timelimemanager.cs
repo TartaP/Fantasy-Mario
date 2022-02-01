@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 public class Timelimemanager : MonoBehaviour
 {
     private bool fix = false;
@@ -38,6 +39,8 @@ public class Timelimemanager : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         director.Play();
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("EndScreen");
 
     }
 }

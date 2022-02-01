@@ -30,6 +30,13 @@ public class Character : MonoBehaviour
 
     public Timelimemanager timelinemanager;
 
+    [SerializeField] private AudioSource jumpSound;
+    [SerializeField] private AudioSource growthSound;
+    [SerializeField] private AudioSource FireUP;
+    [SerializeField] private AudioSource enemydeadSound;
+    [SerializeField] private AudioSource shrinkSound;
+    [SerializeField] private AudioSource deathSound;
+
     
 
 
@@ -38,6 +45,7 @@ public class Character : MonoBehaviour
         anim.SetBool("big", false);
         canFire = false;
         anim.SetBool("firebig", false);
+        shrinkSound.Play();
     }
 
 
@@ -86,7 +94,8 @@ public class Character : MonoBehaviour
                 spriteRenderer.flipX = true;
 
             if (Input.GetKey(KeyCode.X) && grounded)
-                Jump(jumpPower);
+                {Jump(jumpPower);
+                jumpSound.Play();}
 
             anim.SetBool("run", horizontalInput != 0);
             anim.SetBool("grounded", grounded);
@@ -136,6 +145,7 @@ public class Character : MonoBehaviour
                  if (collision.collider.tag == "enemy")
                  {
                      Jump(bouncePower);
+                     enemydeadSound.Play();
                      Destroy(collision.gameObject);
                      ScoreManager.instance.goblinscore();
                      return;
@@ -186,12 +196,14 @@ public class Character : MonoBehaviour
      public void gainLife()
      {
          GetComponent<Life>().GainLife();
+         growthSound.Play();
      }
 
      public void growUP()
      {
          anim.SetBool("big", true);
          GetComponent<Health>().gainHealth();
+         growthSound.Play();
 
          ScoreManager.instance.growth();
      }
@@ -205,6 +217,7 @@ public class Character : MonoBehaviour
      {
          canFire = true;
          anim.SetBool("firebig", true);
+         FireUP.Play();
          
          ScoreManager.instance.attackup();
      }
@@ -214,6 +227,7 @@ public class Character : MonoBehaviour
          isDead = true;
          anim.SetBool("Dead", isDead);
 
+         deathSound.Play();
 
          ctrlActive = false;
 
