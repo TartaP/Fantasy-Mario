@@ -11,6 +11,8 @@ public class Character : MonoBehaviour
 
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
+
+    [SerializeField] private GameObject flagPole;
     private Rigidbody2D body;
     private Animator anim;
 
@@ -25,6 +27,10 @@ public class Character : MonoBehaviour
     private bool isDead;
     private Collider2D playercol;
     public float shockForce;
+
+    public Timelimemanager timelinemanager;
+
+    
 
 
     public void TakeDamage()
@@ -42,6 +48,7 @@ public class Character : MonoBehaviour
 
     private void Awake()
     {
+        timelinemanager.enabled = false;
         inventory = new List<string>();
         enabled = true; 
         body = GetComponent<Rigidbody2D>();
@@ -149,6 +156,17 @@ public class Character : MonoBehaviour
              Destroy(collision.collider.gameObject);
 
              
+         }
+
+         if (collision.collider.CompareTag("flagpole"))
+         {
+             ctrlActive = false;
+             anim.SetTrigger("Grab");
+             transform.Translate(0, -1.93f, 0);
+             
+             timelinemanager.StartTimeline();
+             Debug.Log("grabsuccess");
+
          }
          
      }

@@ -12,6 +12,7 @@ TagManager:
   - GrowthPot
   - 1UP
   - AttackPower
+  - flagpole
   layers:
   - Default
   - TransparentFX

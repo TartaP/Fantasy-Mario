@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class flagpole : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    private Animator anim;
+
+    private void Awake()
     {
-        
+        //anim = GetComponent<Animator>();
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //void OnCollisionEnter2D(Collision2D col)
+    //{
+        //if (col.collider.tag == "Player")
+        //{
+            //anim.SetTrigger("Grab");
+        //}
+    //}
+
+
 }
