@@ -36,7 +36,7 @@ public class Character : MonoBehaviour
     [SerializeField] private AudioSource enemydeadSound;
     [SerializeField] private AudioSource shrinkSound;
     [SerializeField] private AudioSource deathSound;
-
+    [SerializeField] private AudioSource winSound;
     
 
 
@@ -173,6 +173,7 @@ public class Character : MonoBehaviour
              ctrlActive = false;
              anim.SetTrigger("Grab");
              transform.Translate(0, -1.93f, 0);
+             winSound.Play();
              
              timelinemanager.StartTimeline();
              Debug.Log("grabsuccess");

@@ -13,7 +13,7 @@ public class Projectile : MonoBehaviour
      private BoxCollider2D boxCollider;
      private Rigidbody2D rb;
      public LayerMask enemyLayer;
-
+     [SerializeField] AudioSource fireballhit;
 
 
      private void Awake()
@@ -75,6 +75,7 @@ public class Projectile : MonoBehaviour
          RaycastHit2D rayRight = Physics2D.Raycast(transform.position, transform.right, .3f, enemyLayer);
          if (rayLeft.collider != null) 
          {
+             fireballhit.Play();
              Destroy(rayLeft.collider.gameObject);
             Debug.Log("leftcontact");
              this.gameObject.SetActive(false); 
@@ -83,6 +84,7 @@ public class Projectile : MonoBehaviour
          }
          else if (rayRight.collider != null) 
          {
+            fireballhit.Play();
             Destroy(rayRight.collider.gameObject);           
             Debug.Log("rightcontact");
             this.gameObject.SetActive(false);
