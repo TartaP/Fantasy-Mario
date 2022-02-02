@@ -7540,6 +7540,7 @@ GameObject:
   - component: {fileID: 808590321}
   - component: {fileID: 808590320}
   - component: {fileID: 808590324}
+  - component: {fileID: 808590325}
   m_Layer: 5
   m_Name: UICanvas
   m_TagString: Untagged
@@ -7645,6 +7646,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1573339837}
   diamondscoreText: {fileID: 1267306645}
+--- !u!114 &808590325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808590319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de719d6d1052d1c42a3b2a3021909948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingTime: 400
+  countdownText: {fileID: 82111432}
 --- !u!1 &831430426
 GameObject:
   m_ObjectHideFlags: 0
@@ -19503,6 +19518,91 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!1 &1539180470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1539180473}
+  - component: {fileID: 1539180472}
+  - component: {fileID: 1539180471}
+  m_Layer: 0
+  m_Name: TimelineManagerFire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1539180471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539180470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de50c565acfc9db4787124b56e12d5f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normal: {fileID: 11400000, guid: 9e83b6d2f8e53b34c9ffe3cf53b40c26, type: 2}
+  wizard: {fileID: 11400000, guid: 4bc6090933875bb40ab222e27877dc16, type: 2}
+  fireWiz: {fileID: 11400000, guid: e03cded6324e1d24f94619281848d35b, type: 2}
+  playerAnimator: {fileID: 361059939}
+  playerAnim: {fileID: 0}
+  director: {fileID: 1539180472}
+--- !u!320 &1539180472
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539180470}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: e03cded6324e1d24f94619281848d35b, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 425270139358807555, guid: 9e83b6d2f8e53b34c9ffe3cf53b40c26, type: 2}
+    value: {fileID: 361059939}
+  - key: {fileID: 3117034415173275619, guid: 9e83b6d2f8e53b34c9ffe3cf53b40c26, type: 2}
+    value: {fileID: 361059939}
+  - key: {fileID: 0}
+    value: {fileID: 361059939}
+  - key: {fileID: -6658434993134527402, guid: 9e83b6d2f8e53b34c9ffe3cf53b40c26, type: 2}
+    value: {fileID: 361059939}
+  - key: {fileID: -552065827334078146, guid: 9e83b6d2f8e53b34c9ffe3cf53b40c26, type: 2}
+    value: {fileID: 361059939}
+  - key: {fileID: 425270139358807555, guid: e03cded6324e1d24f94619281848d35b, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 3117034415173275619, guid: e03cded6324e1d24f94619281848d35b, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -6658434993134527402, guid: e03cded6324e1d24f94619281848d35b, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -552065827334078146, guid: e03cded6324e1d24f94619281848d35b, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &1539180473
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539180470}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 174.05, y: -1.56, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1543769153
 GameObject:
   m_ObjectHideFlags: 0
@@ -19712,7 +19812,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1573339835
 GameObject:
@@ -20257,6 +20357,91 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1601760904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1601760907}
+  - component: {fileID: 1601760906}
+  - component: {fileID: 1601760905}
+  m_Layer: 0
+  m_Name: TimelineManagerBig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1601760905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601760904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de50c565acfc9db4787124b56e12d5f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normal: {fileID: 11400000, guid: 9e83b6d2f8e53b34c9ffe3cf53b40c26, type: 2}
+  wizard: {fileID: 11400000, guid: 4bc6090933875bb40ab222e27877dc16, type: 2}
+  fireWiz: {fileID: 11400000, guid: e03cded6324e1d24f94619281848d35b, type: 2}
+  playerAnimator: {fileID: 361059939}
+  playerAnim: {fileID: 0}
+  director: {fileID: 1601760906}
+--- !u!320 &1601760906
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601760904}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 4bc6090933875bb40ab222e27877dc16, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 425270139358807555, guid: 9e83b6d2f8e53b34c9ffe3cf53b40c26, type: 2}
+    value: {fileID: 361059939}
+  - key: {fileID: 3117034415173275619, guid: 9e83b6d2f8e53b34c9ffe3cf53b40c26, type: 2}
+    value: {fileID: 361059939}
+  - key: {fileID: 0}
+    value: {fileID: 361059939}
+  - key: {fileID: -6658434993134527402, guid: 9e83b6d2f8e53b34c9ffe3cf53b40c26, type: 2}
+    value: {fileID: 361059939}
+  - key: {fileID: -552065827334078146, guid: 9e83b6d2f8e53b34c9ffe3cf53b40c26, type: 2}
+    value: {fileID: 361059939}
+  - key: {fileID: 425270139358807555, guid: 4bc6090933875bb40ab222e27877dc16, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 3117034415173275619, guid: 4bc6090933875bb40ab222e27877dc16, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -6658434993134527402, guid: 4bc6090933875bb40ab222e27877dc16, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -552065827334078146, guid: 4bc6090933875bb40ab222e27877dc16, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &1601760907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601760904}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 174.05, y: -1.56, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1602297387
 GameObject:
   m_ObjectHideFlags: 0
@@ -23198,6 +23383,12 @@ PlayableDirector:
     value: {fileID: 361059939}
   - key: {fileID: 3117034415173275619, guid: 9e83b6d2f8e53b34c9ffe3cf53b40c26, type: 2}
     value: {fileID: 361059939}
+  - key: {fileID: 0}
+    value: {fileID: 361059939}
+  - key: {fileID: -6658434993134527402, guid: 9e83b6d2f8e53b34c9ffe3cf53b40c26, type: 2}
+    value: {fileID: 361059939}
+  - key: {fileID: -552065827334078146, guid: 9e83b6d2f8e53b34c9ffe3cf53b40c26, type: 2}
+    value: {fileID: 361059939}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1966056911
@@ -23226,6 +23417,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de50c565acfc9db4787124b56e12d5f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normal: {fileID: 11400000, guid: 9e83b6d2f8e53b34c9ffe3cf53b40c26, type: 2}
+  wizard: {fileID: 11400000, guid: 4bc6090933875bb40ab222e27877dc16, type: 2}
+  fireWiz: {fileID: 11400000, guid: e03cded6324e1d24f94619281848d35b, type: 2}
   playerAnimator: {fileID: 361059939}
   playerAnim: {fileID: 0}
   director: {fileID: 1966056910}

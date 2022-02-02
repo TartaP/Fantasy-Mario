@@ -30,6 +30,12 @@ public class Character : MonoBehaviour
 
     public Timelimemanager timelinemanager;
 
+    public Timelimemanager timelinemanagerBig;
+
+    public Timelimemanager timelinemanagerFire;
+
+
+
     [SerializeField] private AudioSource jumpSound;
     [SerializeField] private AudioSource growthSound;
     [SerializeField] private AudioSource FireUP;
@@ -175,7 +181,21 @@ public class Character : MonoBehaviour
              transform.Translate(0, -1.93f, 0);
              winSound.Play();
              
-             timelinemanager.StartTimeline();
+             if (anim.GetBool("big"))
+             {
+                timelinemanagerBig.StartTimeline();
+             }
+
+             else if (anim.GetBool("firebig"))
+             {
+                timelinemanagerFire.StartTimeline();
+             }
+
+             else
+             {
+                 timelinemanager.StartTimeline();
+             }
+
              Debug.Log("grabsuccess");
 
          }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
+using UnityEngine.Timeline;
 public class Timelimemanager : MonoBehaviour
 {
     private bool fix = false;
@@ -31,6 +32,8 @@ public class Timelimemanager : MonoBehaviour
     public void StartTimeline()
     {
         
+
+
         StartCoroutine(poletimer());
         Debug.Log("cutsceneSuccess");
         
