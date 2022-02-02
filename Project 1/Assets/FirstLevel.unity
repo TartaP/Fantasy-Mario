@@ -1632,7 +1632,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1642.8, y: 847.7}
+  m_AnchoredPosition: {x: 1640, y: 838}
   m_SizeDelta: {x: 100.7286, y: 84.7121}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &82111432
@@ -4647,16 +4647,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501537546}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1334154724}
-  m_RootOrder: 1
+  m_Father: {fileID: 1267306644}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -299, y: 448.23}
+  m_AnchoredPosition: {x: -97.63002, y: 0.0000085831}
   m_SizeDelta: {x: 87.8635, y: 87.863}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &501537548
@@ -5923,6 +5923,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!70 &533747981
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533747965}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: cc7901a017a55ee4d8059c7d5bbdcde0, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0000038146973, y: 0.00000011920929}
+  m_Size: {x: 0.69, y: 0.98}
+  m_Direction: 0
 --- !u!1 &547325725
 GameObject:
   m_ObjectHideFlags: 0
@@ -7077,12 +7093,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1966056912}
     - target: {fileID: 732377402, guid: 577d47845512a6a41b7ca9b6ba934860, type: 3}
+      propertyPath: timelinemanagerBig
+      value: 
+      objectReference: {fileID: 1601760905}
+    - target: {fileID: 732377402, guid: 577d47845512a6a41b7ca9b6ba934860, type: 3}
+      propertyPath: timelinemanagerFire
+      value: 
+      objectReference: {fileID: 1539180471}
+    - target: {fileID: 732377402, guid: 577d47845512a6a41b7ca9b6ba934860, type: 3}
       propertyPath: childObjs.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 732377403, guid: 577d47845512a6a41b7ca9b6ba934860, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 317819872755220872, guid: 577d47845512a6a41b7ca9b6ba934860, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 317819872755220873, guid: 577d47845512a6a41b7ca9b6ba934860, type: 3}
       propertyPath: m_CollisionDetection
@@ -8824,7 +8852,7 @@ TilemapCollider2D:
   m_Material: {fileID: 6200000, guid: cc7901a017a55ee4d8059c7d5bbdcde0, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
@@ -17786,13 +17814,14 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 501537547}
   m_Father: {fileID: 1334154724}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -182, y: -24.741028}
+  m_AnchoredPosition: {x: -201.37, y: -10.579987}
   m_SizeDelta: {x: 107.3885, y: 91.40369}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1267306645
@@ -17974,7 +18003,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1267306644}
-  - {fileID: 501537547}
   - {fileID: 1573339836}
   m_Father: {fileID: 808590323}
   m_RootOrder: 3
@@ -19535,7 +19563,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1539180471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19548,9 +19576,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de50c565acfc9db4787124b56e12d5f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normal: {fileID: 11400000, guid: 9e83b6d2f8e53b34c9ffe3cf53b40c26, type: 2}
-  wizard: {fileID: 11400000, guid: 4bc6090933875bb40ab222e27877dc16, type: 2}
-  fireWiz: {fileID: 11400000, guid: e03cded6324e1d24f94619281848d35b, type: 2}
   playerAnimator: {fileID: 361059939}
   playerAnim: {fileID: 0}
   director: {fileID: 1539180472}
@@ -19580,13 +19605,13 @@ PlayableDirector:
   - key: {fileID: -552065827334078146, guid: 9e83b6d2f8e53b34c9ffe3cf53b40c26, type: 2}
     value: {fileID: 361059939}
   - key: {fileID: 425270139358807555, guid: e03cded6324e1d24f94619281848d35b, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 361059939}
   - key: {fileID: 3117034415173275619, guid: e03cded6324e1d24f94619281848d35b, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 361059939}
   - key: {fileID: -6658434993134527402, guid: e03cded6324e1d24f94619281848d35b, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 361059939}
   - key: {fileID: -552065827334078146, guid: e03cded6324e1d24f94619281848d35b, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 361059939}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1539180473
@@ -19844,7 +19869,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1334154724}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.47321573}
   m_AnchorMax: {x: 0.5, y: 0.47321573}
@@ -20374,7 +20399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1601760905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20387,9 +20412,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de50c565acfc9db4787124b56e12d5f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normal: {fileID: 11400000, guid: 9e83b6d2f8e53b34c9ffe3cf53b40c26, type: 2}
-  wizard: {fileID: 11400000, guid: 4bc6090933875bb40ab222e27877dc16, type: 2}
-  fireWiz: {fileID: 11400000, guid: e03cded6324e1d24f94619281848d35b, type: 2}
   playerAnimator: {fileID: 361059939}
   playerAnim: {fileID: 0}
   director: {fileID: 1601760906}
@@ -20419,13 +20441,13 @@ PlayableDirector:
   - key: {fileID: -552065827334078146, guid: 9e83b6d2f8e53b34c9ffe3cf53b40c26, type: 2}
     value: {fileID: 361059939}
   - key: {fileID: 425270139358807555, guid: 4bc6090933875bb40ab222e27877dc16, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 361059939}
   - key: {fileID: 3117034415173275619, guid: 4bc6090933875bb40ab222e27877dc16, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 361059939}
   - key: {fileID: -6658434993134527402, guid: 4bc6090933875bb40ab222e27877dc16, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 361059939}
   - key: {fileID: -552065827334078146, guid: 4bc6090933875bb40ab222e27877dc16, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 361059939}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1601760907
@@ -23417,9 +23439,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de50c565acfc9db4787124b56e12d5f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normal: {fileID: 11400000, guid: 9e83b6d2f8e53b34c9ffe3cf53b40c26, type: 2}
-  wizard: {fileID: 11400000, guid: 4bc6090933875bb40ab222e27877dc16, type: 2}
-  fireWiz: {fileID: 11400000, guid: e03cded6324e1d24f94619281848d35b, type: 2}
   playerAnimator: {fileID: 361059939}
   playerAnim: {fileID: 0}
   director: {fileID: 1966056910}

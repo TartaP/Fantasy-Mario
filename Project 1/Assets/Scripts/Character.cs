@@ -78,8 +78,13 @@ public class Character : MonoBehaviour
     
     private void Update()
     {
+
+      if(Input.GetKeyDown("escape"))
+      {
+        Application.Quit();  
+      }
       if (ctrlActive == false)
-      return;
+        return;
 
         horizontalInput = Input.GetAxis("Horizontal");
         if (Input.GetKey(KeyCode.Z))
@@ -101,16 +106,12 @@ public class Character : MonoBehaviour
 
             if (Input.GetKey(KeyCode.X) && grounded)
                 {Jump(jumpPower);
-                jumpSound.Play();}
+                jumpSound.Play();
+            }
 
             anim.SetBool("run", horizontalInput != 0);
             anim.SetBool("grounded", grounded);
 
-        
-        
-
-        
-       
     }
 
     private void Jump(float power)
